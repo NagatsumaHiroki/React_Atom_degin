@@ -9,7 +9,7 @@ export const UserCard = (props) => {
       <UserIconWithName image={user.image} name={user.name} />
       <SDL>
         <dt>メール</dt>
-        <dd>{user.mail}</dd>
+        <dd>{user.email}</dd>
         <dt>TEL</dt>
         <dd>{user.phone}</dd>
         <dt>会社名</dt>
@@ -33,5 +33,7 @@ const SDL = styled.dl`
   dd {
     padding-left: 32px;
     padding-bottom: 8px;
+    /* 折り返し処理*/
+    overflow-wrap: break-word;
   }
 `;
